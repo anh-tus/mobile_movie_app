@@ -1,50 +1,72 @@
-# Welcome to your Expo app 👋
+# 🎬 Mobile Movie App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Ứng dụng xem phim trên mobile được xây dựng bằng React Native & Expo.
 
-## Get started
+## 🛠 Tech Stack
 
-1. Install dependencies
+- [Expo](https://expo.dev) ~54.0.34
+- [React Native](https://reactnative.dev) 0.81.5
+- [Expo Router](https://docs.expo.dev/router/introduction) – File-based routing
+- [NativeWind](https://www.nativewind.dev) + [Tailwind CSS](https://tailwindcss.com) – Styling
+- TypeScript
 
-   ```bash
-   npm install
-   ```
+## 📁 Cấu trúc thư mục
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+mobile_movie_app/
+├── app/              # Màn hình & routing (file-based)
+│   ├── _layout.tsx
+│   ├── globals.css
+│   └── index.tsx
+├── assets/           # Hình ảnh, icon
+├── app.json          # Cấu hình Expo
+├── tailwind.config.js
+└── tsconfig.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🚀 Bắt đầu
 
-## Learn more
+### Cài đặt dependencies
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Chạy ứng dụng
 
-## Join the community
+```bash
+npx expo start
+```
 
-Join our community of developers creating universal apps.
+Sau đó chọn môi trường:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Android**: Nhấn `a` hoặc dùng Android Emulator
+- **iOS**: Nhấn `i` hoặc dùng iOS Simulator
+- **Expo Go**: Quét QR code bằng app Expo Go
+
+## 🌿 Git Workflow
+
+| Nhánh  | Mục đích                         |
+| ------ | -------------------------------- |
+| `main` | Production – sản phẩm ổn định    |
+| `dev`  | Development – code tính năng mới |
+
+```bash
+# Phát triển tính năng mới
+git checkout dev
+
+# Merge vào main khi hoàn thiện
+git checkout main
+git merge dev
+git push origin main
+```
+
+## 📦 Scripts
+
+```bash
+npm start          # Khởi động Expo dev server
+npm run android    # Chạy trên Android
+npm run ios        # Chạy trên iOS
+npm run web        # Chạy trên Web
+npm run lint       # Kiểm tra lỗi code
+```
