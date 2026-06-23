@@ -5,6 +5,7 @@ import React from "react";
 import { Image, ImageBackground, Text, View } from "react-native";
 
 const TabIcon = ({ focused, icon, title }: any) => {
+  // Custom component for tab icons
   if (focused) {
     return (
       <ImageBackground
@@ -30,6 +31,7 @@ const _layout = () => {
   return (
     <Tabs
       screenOptions={{
+        // Global screen options for all tabs
         tabBarShowLabel: false,
         tabBarItemStyle: {
           width: "100%",
